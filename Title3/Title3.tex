@@ -8,6 +8,8 @@
 \graphicspath{ {img/} }
 \usepackage{lipsum}
 
+\usepackage[hidelinks]{hyperref}
+
 % Header and Footer stuff
 \usepackage{fancyhdr}
 \pagestyle{fancy}
@@ -18,74 +20,17 @@
 %
 
 \begin{document}
-\begin{titlepage}
-	\begin{center}
-	\includegraphics[width=5cm]{Title3-84413ce8.png}\\
-	\line(1,0){300}\\
-	[0.5cm]
-	\huge{\bfseries Crystal: The new beautiful Ruby}\\
-	[0.1cm]
-	\line(1,0){250}\\
-	\textsc{\LARGE By Jordano Moscoso}\\
-	\textsc{\Large Osmond Club}\\
-	[8cm]
-	\end{center}
-	\begin{flushright}
-	\textsc{\large J. Moscoso}\\
-	A Latex User \\
-	\#1234567789 \\
-	Octubre 6, 2017 \\
-	\end{flushright}
-\end{titlepage}
+\input{parts/frontpage.tex}
 
 \pagenumbering{roman}
-\section*{Resumen}\label{sec:summary}
-\lipsum[1]
-\lipsum[1]
-\lipsum[1]
-\addcontentsline{toc}{section}{\numberline{}Resumen}
-\cleardoublepage
-
-\section*{Agredecimientos}\label{sec:acknowlegments}
-\lipsum[1]
-\addcontentsline{toc}{section}{\numberline{}Agredecimientos}
-\cleardoublepage
-
-\tableofcontents
-\thispagestyle{empty}
-\cleardoublepage
-
-\listoffigures
-\addcontentsline{toc}{section}{\numberline{}Índice de Figuras}
-\cleardoublepage
+\input{parts/summary.tex}
+\input{parts/acknowlegments.tex}
+\input{parts/tablesofcontents.tex}
 
 \pagenumbering{arabic}
-\section{Introducción}\label{sec:intro}
-\lipsum[1]
-\lipsum[1]
 \setcounter{page}{1}
-\newpage
-
-\section{Sintáxis}\label{sec:syntax}
-\lipsum[1]
-\lipsum[1]
-
-\subsection{Simpleza}
-\lipsum[1]
-La introducción esta en la página \pageref{sec:intro}.
-\subsubsection{Factores}
-\begin{itemize}
-	\item Claridad
-	\item Productividad
-	\item Implicidad
-\end{itemize}
-\begin{figure}[H]
-	\centering
-	\includegraphics[height=2in]{factores.jpg}
-	\caption[Búsqueda de ayuda]{Búsqueda de ayuda entre los mares.}
-	\label{fig:features}
-\end{figure}
-
-Como podemos ver estamos mostrando Crystal en la figura \ref{fig:features}
+\input{parts/introduction.tex}
+\input{parts/sintaxis.tex}
+\input{parts/benchmarks.tex}
 
 \end{document}
