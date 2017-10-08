@@ -1,7 +1,11 @@
 \documentclass{article}
 \usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
 \usepackage[margin=1in,left=1.5in,includefoot]{geometry}
-\usepackage{graphicx}
+\usepackage{graphicx} % to import iamges
+\usepackage{float} % to float image
+\graphicspath{ {img/} }
 \usepackage{lipsum}
 
 % Header and Footer stuff
@@ -12,7 +16,6 @@
 \fancyfoot[R]{\thepage} % new foot
 \renewcommand{\headrulewidth}{0pt} % clean header line
 %
-\graphicspath{ {img/} }
 
 \begin{document}
 \begin{titlepage}
@@ -52,6 +55,10 @@
 \thispagestyle{empty}
 \cleardoublepage
 
+\listoffigures
+\addcontentsline{toc}{section}{\numberline{}Índice de Figuras}
+\cleardoublepage
+
 \pagenumbering{arabic}
 \section{Introducción}\label{sec:intro}
 \lipsum[1]
@@ -65,12 +72,20 @@
 
 \subsection{Simpleza}
 \lipsum[1]
+La introducción esta en la página \pageref{sec:intro}.
 \subsubsection{Factores}
 \begin{itemize}
 	\item Claridad
 	\item Productividad
 	\item Implicidad
 \end{itemize}
-La introducción esta en la página \pageref{sec:intro}.
+\begin{figure}[H]
+	\centering
+	\includegraphics[height=2in]{factores.jpg}
+	\caption[Búsqueda de ayuda]{Búsqueda de ayuda entre los mares.}
+	\label{fig:features}
+\end{figure}
+
+Como podemos ver estamos mostrando Crystal en la figura \ref{fig:features}
 
 \end{document}
