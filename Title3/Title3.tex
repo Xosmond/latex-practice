@@ -35,4 +35,42 @@
 	\end{flushright}
 \end{titlepage}
 
+\pagenumbering{roman}
+\section*{Resumen}\label{sec:summary}
+\lipsum[1]
+\lipsum[1]
+\lipsum[1]
+\addcontentsline{toc}{section}{\numberline{}Resumen}
+\cleardoublepage
+
+\section*{Agredecimientos}\label{sec:acknowlegments}
+\lipsum[1]
+\addcontentsline{toc}{section}{\numberline{}Agredecimientos}
+\cleardoublepage
+
+\tableofcontents
+\thispagestyle{empty}
+\cleardoublepage
+
+\pagenumbering{arabic}
+\section{Introducción}\label{sec:intro}
+\lipsum[1]
+\lipsum[1]
+\setcounter{page}{1}
+\newpage
+
+\section{Sintáxis}\label{sec:syntax}
+\lipsum[1]
+\lipsum[1]
+
+\subsection{Simpleza}
+\lipsum[1]
+\subsubsection{Factores}
+\begin{itemize}
+	\item Claridad
+	\item Productividad
+	\item Implicidad
+\end{itemize}
+La introducción esta en la página \pageref{sec:intro}.
+
 \end{document}
